@@ -1,0 +1,16 @@
+Name: SPSSINC PROCESS FILES_SEARCH
+Dialog-Specs: SPSSINC_PROCESS_FILES_SEARCH.spd
+Summary: Search the cases in a set of SPSS SAV files
+Description: This procedure provides a way to search through the cases
+  in a collection of similarly structured data files and display infor
+ mation from those matching the search criteria. You specify the files
+  to search, the case selection criterion, and the variables to displa
+ y for the selected cases. This bundle requires the SPSSINC PROCESS FI
+ LES extension.
+Author: JKP IBM SPSS
+Version: 1.1.5
+Product-Version: 18
+Date: 1/2/2014
+Plugins: Python
+Python-Modules: SPSSINC_PROCESS_FILES.py
+Translation-Catalogues: lang
