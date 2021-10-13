@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content=
+  "text/html; charset=utf-8">
+
+  <title>Procurar os Casos em um Conjunto de Arquivos SPSS SAV</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>Procurar os Casos em um Conjunto de Arquivos SPSS SAV</h1>Este procedimento fornece uma maneira para procurar nos casos em uma coleção de arquivos de dados estruturados de forma semelhante e exibir informações a partir desses arquivos correspondentes aos critérios de procura. Você especifica os arquivos para procura, o critério de seleção de caso e as variáveis para exibir para os casos selecionados.
+
+  <p class="bullet">• Se o arquivo ativo atual não tiver um nome do conjunto de dados, ele será fechada quando este procedimento é executado.</p>
+
+  <p><span class="runinhead">Arquivos de Dados de Entrada Especificados pela Expressão Curinga.</span> Escolha um diretório para processar e, opcionalmente, especifique um padrão de arquivo. Por exemplo:<br>
+  c:\mydata\x*.sav<br>
+  processaria todos os arquivos sav no diretório c:\mydata cujos nomes iniciarem com a letra x.</p>
+
+  <p class="bullet">• Se nenhuma expressão de nome do arquivo for determinada, *.sav é assumido.</p>
+
+  <p class="bullet">• Você deve escolher esta opção ou a   seguinte opção <span class="screen">Dados de Entrada</span>, mas não   ambas.</p>
+
+  <p><span class="runinhead">Arquivos de Dados de Entrada Especificados em um Arquivo.</span> Processe todos os arquivos listados no arquivo especificado.
+  O comando SPSSINC SPLIT DATASET pode produzir um arquivo no formato correto.</p>
+
+  <p class="bullet">• Você deve escolher esta opção ou a   opção anterior <span class="screen">Dados de Entrada</span>, mas não   ambas.</p>
+
+  <p><span class="runinhead">Expressão de Procura.</span> Insira uma expressão que avalie como true ou false utilizando os valores de variáveis em cada caso. Isso é equivalente a uma expressão que   seria inserida em Data&gt;Select Cases&gt;If.</p>
+
+  <p class="bullet">• Se a expressão não puder ser avaliado porque algumas variáveis não existem no arquivo sendo procurado, o caso não é selecionado.</p>
+
+  <p class="bullet">• Use aspas simples se precisar incluir um valor de sequência de caracteres na expressão ou use duas aspas duplas. (A expressão toda ficará entre aspas duplas.)</p>
+
+  <p><span class="runinhead">Variáveis para Listar.</span> Selecione uma ou mais variáveis para serem exibidas para casos correspondentes.</p>
+
+  <p><span class="runinhead">Processamento de Arquivo de Dados após Cada Passo.</span> Escolha <span class="screen">Fechar</span> para fechar   cada conjunto de dados após ele ser procurado.</p>
+
+  <h2>Recursos adicionais</h2>Execute o comando<br>
+  SPSSINC PROCESS FILES /HELP.<br>
+  para exibir a descrição toda da sintaxe. Este diálogo implementa   um subconjunto dos recursos de SPSSINC PROCESS FILES. O   diálogo Utilitários&gt;Processar Arquivos de Dados suporta os recursos   gerais deste comando.
+
+  <p>Para utilizar um arquivo para especificar os arquivos que devem ser   processados, crie um arquivo com um nome por linha, incluindo   o caminho para o arquivo. O nome deve ser colocado entre aspas duplas (").
+  Qualquer coisa a seguir na linha será ignorada. Linhas em branco e linhas   começando com # são ignoradas.</p>
+
+  <h2>Requisitos</h2>Este comando requer o   Python Plug-in Programmability. O Plug-in pode ser localizado no   CD do IBM SPSS Statistics, ou você pode fazer download dele no SPSS   Developer Central (www.spss.com/devcentral).
+  <hr>
+
+  <p style="font-size:80%;">© Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

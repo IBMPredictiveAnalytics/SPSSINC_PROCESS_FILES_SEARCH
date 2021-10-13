@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Extension xmlns="http://spss.com/clementine/extensions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" debug="false" version="1.0" xsi:schemaLocation="http://spss.com/clementine/extensions http://xml.spss.com/clementine/extensions/CLEFSpecificationFile.xsd">
+	<ExtensionDetails copyright="Licensed Materials - Property of IBM.  IBM SPSS Products: Statistics Common (C) Copyright IBM Corp. 1989, 2013.  US Government Users Restricted Rights - Use, duplication or  disclosure restricted by GSA ADP Schedule Contract with IBM Corp." description="" id="SPSSINC_PROCESS_FILES_SEARCH" label="" provider="SPSS, Inc." providerTag="spss" version="1.0"/>
+	<Resources>
+		<Bundle id="bundle1" path="SPSSINC_PROCESS_FILES_SEARCH" type="properties"/>
+	</Resources>
+	<CommonObjects>
+		<Actions>
+			<Action id="SPSSINC_PROCESS_FILES_SEARCH_action" imagePath="IBMdialogicon.png" label="Search Data Files" labelKey="SPSSINC_PROCESS_FILES_SEARCH_action.LABEL"/>
+		</Actions>
+	</CommonObjects>
+	<UserInterface>
+		<Controls>
+			<MenuItem action="SPSSINC_PROCESS_FILES_SEARCH_action" offset="14" showIcon="true" spssMenu="Edit"/>
+		</Controls>
+	</UserInterface>
+	<Node id="SPSSINC_PROCESS_FILES_SEARCH" label="Search SPSS SAV Files Data" labelKey="SPSSINC_PROCESS_FILES_SEARCH.LABEL" type="modelBuilder">
+		<Properties>
+			<Property name="SPSSINC_PROCESS_FILES_SEARCH" syntax="SPSSINC PROCESS FILES %%INPUTDATA%%  %%FILELIST%%&#10;SEARCH=YES %%closedata%%&#10;/MACRODEFS %%PARM1%% %%PARM2%%"/>
+			<Property description="false" name="SPSSINC_PROCESS_FILES_SEARCH_modal"/>
+			<Property description="" descriptionKey="source_vars_tooltip.LABEL" isList="true" label="Variables:" labelKey="source_vars.LABEL" name="source_vars" selectionPool="source_fields" syntax="%%ThisValue%%" valueType="field"/>
+			<Property description="" descriptionKey="INPUTDATA_tooltip.LABEL" label="Input Data Files Specified by Wildcard Expression" labelKey="INPUTDATA.LABEL" name="INPUTDATA" syntax="%%ThisValue%%"/>
+			<Property defaultValue="false" description="" descriptionKey="item_22_tooltip.LABEL" label="Process files matching wildcard" labelKey="item_22.LABEL" name="item_22" syntax="%%ThisValue%%±" valueType="boolean"/>
+			<Property defaultValue="" description="You can select a directory using Browse or type a wildcard expression" descriptionKey="inputdataspec_tooltip.LABEL" inputdataspec_filter="All File Types (*.*)|*.*|A^" isRequired="true" label="File Wildcard Expression:" labelKey="inputdataspec.LABEL" name="inputdataspec" syntax="INPUTDATA=%%ThisValue%%" valueType="string"/>
+			<Property description="" descriptionKey="FILELIST_tooltip.LABEL" label="Input Data Files Specified in a File" labelKey="FILELIST.LABEL" name="FILELIST" syntax="%%ThisValue%%"/>
+			<Property defaultValue="false" description="" descriptionKey="item_25_tooltip.LABEL" label="Process files listed in a file such as one produced by\nSPSSINC SPLIT DATASET" labelKey="item_25.LABEL" name="item_25" syntax="%%ThisValue%%±" valueType="boolean"/>
+			<Property defaultValue="" description="" descriptionKey="filelist_tooltip.LABEL" filelist_filter="All File Types (*.*)|*.*|A^" isRequired="true" label="File Containing List of Data Files" labelKey="filelist.LABEL" name="filelist" syntax="FILELIST=%%ThisValue%%" valueType="string"/>
+			<Property defaultValue="closeafter" description="" descriptionKey="closedata_tooltip.LABEL" label="Data File Processing after Search" labelKey="closedata.LABEL" name="closedata" syntax="CLOSEDATA=%%ThisValue%%" valueType="enum">
+				<Enumeration>
+					<Enum description="close all data files after each input is processed" descriptionKey="closeafter_tooltip.LABEL" hasSubGroup="false" label="Close" labelKey="closeafter.LABEL" mnemonic="E" mnemonicKey="closeafter_mnemonic.VALUE" syntax="YES" value="closeafter"/>
+					<Enum description="Leave data files open after each step" descriptionKey="item_24_b_tooltip.LABEL" hasSubGroup="false" label="Leave open" labelKey="item_24_b.LABEL" mnemonic="N" mnemonicKey="item_24_b_mnemonic.VALUE" syntax="NO" value="item_24_b"/>
+				</Enumeration>
+			</Property>
+			<Property description="" descriptionKey="PARM2_tooltip.LABEL" isList="true" isRequired="true" label="Variables to List:" labelKey="PARM2.LABEL" name="PARM2" selectionPool="source_fields" syntax="PARM2=&quot;%%ThisValue%%&quot;" valueType="field"/>
+			<Property defaultValue="" description="Enter an expression such as would be used for SELECT IF" descriptionKey="PARM1_tooltip.LABEL" isRequired="true" label="Search Expression:" labelKey="PARM1.LABEL" name="PARM1" syntax="PARM1=&quot;%%ThisValue%%&quot;" valueType="string"/>
+		</Properties>
+		<SelectionPool id="source_fields" type="fields"/>
+		<UserInterface>
+			<Tabs>
+				<Tab helpLink="SPSSINC_PROCESS_FILES_SEARCH.htm">
+					<PropertiesPanel>
+						<SourceFieldsBrowser copyFields="false" mnemonic="V" mnemonicKey="source_vars_mnemonic.VALUE" property="source_vars" selectionPool="source_fields" storage="[real integer date time string]">
+							<Layout columnWeight="1.0" fill="both" gridColumn="0" gridRow="0" gridWidth="1" rowWeight="1.0"/>
+						</SourceFieldsBrowser>
+						<StaticText text="This procedure requires the Python programmability plug-in" textKey="item_20.LABEL">
+							<Layout columnWeight="1.0" fill="none" gridColumn="2" gridRow="3" gridWidth="1" rowWeight="0.0"/>
+						</StaticText>
+						<PropertiesPanel id="INPUTDATA" label="Input Data Files Specified by Wildcard Expression" labelKey="INPUTDATA.LABEL">
+							<Layout columnWeight="1.0" fill="both" gridColumn="0" gridRow="2" gridWidth="1" rowWeight="1.0"/>
+							<CheckBoxControl labelAbove="true" mnemonic="W" mnemonicKey="item_22_mnemonic.VALUE" property="item_22">
+								<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="0" gridWidth="1" rowWeight="0.0"/>
+							</CheckBoxControl>
+							<ServerDirectoryChooserControl mnemonic="F" mnemonicKey="inputdataspec_mnemonic.VALUE" mode="open" property="inputdataspec">
+								<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="1" gridWidth="1" leftIndent="8" rowWeight="1.0"/>
+							</ServerDirectoryChooserControl>
+						</PropertiesPanel>
+						<PropertiesPanel id="FILELIST" label="Input Data Files Specified in a File" labelKey="FILELIST.LABEL">
+							<Layout columnWeight="1.0" fill="both" gridColumn="0" gridRow="3" gridWidth="1" rowWeight="1.0"/>
+							<CheckBoxControl labelAbove="true" mnemonic="T" mnemonicKey="item_25_mnemonic.VALUE" property="item_25">
+								<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="0" gridWidth="1" rowWeight="0.0"/>
+							</CheckBoxControl>
+							<ServerFileChooserControl mode="open" property="filelist">
+								<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="1" gridWidth="1" leftIndent="8" rowWeight="1.0"/>
+							</ServerFileChooserControl>
+						</PropertiesPanel>
+						<StaticText text="Choose either wildcard or file list to specify data files" textKey="item_27.LABEL">
+							<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="1" gridWidth="1" rowWeight="0.0"/>
+						</StaticText>
+						<RadioButtonGroupControl property="closedata" rows="2" useSubPanel="false">
+							<Layout columnWeight="1.0" fill="both" gridColumn="2" gridRow="2" gridWidth="1" rowWeight="1.0"/>
+							<RadioButton property="closeafter"/>
+							<RadioButton property="item_24_b"/>
+						</RadioButtonGroupControl>
+						<MultiFieldChooserControl mnemonic="O" mnemonicKey="PARM2_mnemonic.VALUE" property="PARM2" storage="[real integer date time string]">
+							<Layout columnWeight="1.0" fill="both" gridColumn="2" gridRow="1" gridWidth="1" rowWeight="1.0"/>
+						</MultiFieldChooserControl>
+						<TextBoxControl mnemonic="S" mnemonicKey="PARM1_mnemonic.VALUE" property="PARM1">
+							<Layout columnWeight="1.0" fill="horizontal" gridColumn="2" gridRow="0" gridWidth="1" rowWeight="0.0"/>
+						</TextBoxControl>
+						<StaticText text="This dialog was created using a later version of PASW Statistics\nand certain features may not function as intended." textKey="v17_warning.LABEL">
+							<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="4" gridWidth="1" rowWeight="1.0"/>
+						</StaticText>
+					</PropertiesPanel>
+				</Tab>
+			</Tabs>
+		</UserInterface>
+	</Node>
+</Extension>

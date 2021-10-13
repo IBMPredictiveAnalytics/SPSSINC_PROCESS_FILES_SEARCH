@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content=
+  "text/html; charset=utf-8">
+
+  <title>在一組 SPSS SAV 檔案中搜尋觀察值</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>在一組 SPSS SAV 檔案中搜尋觀察值</h1>此程序提供一種方式，用於在具有類似結構的資料檔案集合中搜尋觀察值，並顯示符合搜尋準則的觀察值中的資訊。您指定要搜尋的檔案、觀察值選取準則，以及要為所選觀察值顯示的變數。<p class="bullet">• 如果現行作用中檔案沒有資料集名稱，執行此程序時，該檔案將會關閉。</p>
+
+  <p><span class="runinhead">透過萬用字元表示式指定的輸入資料檔案。</span> 選擇要處理的目錄，並選擇性地指定檔案型樣。例如，<br>
+  c:\mydata\x*.sav<br>
+  將處理 c:\mydata 目錄中名稱以字母 x 開頭的所有 sav 檔案。</p>
+
+  <p class="bullet">• 如果未給定檔名表示式，則假設為 *.sav。</p>
+
+  <p class="bullet">• 您必須選擇此選項或下列<span class="screen">輸入資料</span>選項，但不要同時選擇二者。</p>
+
+  <p><span class="runinhead">在檔案中指定的輸入資料檔案。</span> 處理在指定的檔案中列出的所有檔案。SPSSINC SPLIT DATASET 指令可以產生正確格式的檔案。</p>
+
+  <p class="bullet">• 您必須選擇此選項或之前的<span class="screen">輸入資料</span>選項，但不要同時選擇二者。</p>
+
+  <p><span class="runinhead">搜尋表示式。</span> 使用每個觀察值中的變數值輸入求值為 true 或 false 的表示式。它相當於您在「資料」&gt;「選取觀察值」&gt;If 中輸入的表示式。</p>
+
+  <p class="bullet">• 如果因為要搜尋的檔案中不存在部分變數，而使表示式無法求值，則不會選取觀察值。</p>
+
+  <p class="bullet">• 如果需要在表示式中包含字串值，請使用單引號，或使用兩個雙引號。（整個表示式將用雙引號括住。）</p>
+
+  <p><span class="runinhead">要列出的變數。</span> 選取一或多個要為比對觀察值顯示的變數。</p>
+
+  <p><span class="runinhead">在每個步驟之後處理的資料檔案。</span> 選擇<span class="screen">關閉</span>以在搜尋之後關閉每個資料集。</p>
+
+  <h2>其他特性</h2>執行指令<br>
+  SPSSINC PROCESS FILES /HELP.<br>
+  以顯示整個語法說明。此對話框會實作 SPSSINC PROCESS FILES 的功能子集。「公用程式」&gt;「程序資料檔」對話框支援此指令的一般功能。<p>為了使用檔案來指定應處理的檔案，請建立每行一個名稱（包含檔案路徑）的檔案。名稱必須用雙引號 (") 括住。將忽略該行上後面部分的任何內容。將忽略空白行和以 # 開頭的行。</p>
+
+  <h2>需求</h2>此指令需要 Python Programmability Plug-in，您可以在 IBM SPSS Statistics CD 上找到 Python 外掛程式，也可以從 SPSS Developer Central (www.spss.com/devcentral) 下載。<hr>
+
+  <p style="font-size:80%;">© Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

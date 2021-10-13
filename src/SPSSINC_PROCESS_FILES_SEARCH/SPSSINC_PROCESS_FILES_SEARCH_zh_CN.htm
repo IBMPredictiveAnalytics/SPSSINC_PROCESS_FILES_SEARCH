@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content=
+  "text/html; charset=utf-8">
+
+  <title>在一组 SPSS SAV 文件中搜索个案</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>在一组 SPSS SAV 文件中搜索个案</h1>此过程提供了一种方法，用于在结构相似的一组数据文件中搜索个案，然后显示与搜索条件相匹配的个案的信息。请指定要搜索的文件、个案选择准则以及要针对所选个案显示的变量。
+<p class="bullet">• 如果当前活动文件不具有数据集名称，那么此过程运行完成后，将关闭该文件。</p>
+
+  <p><span class="runinhead">由通配符表达式指定的输入数据文件</span>。请选择要处理的目录，并选择性地指定文件模式。例如，<br>
+  c:\mydata\x*.sav<br> 将处理 c:\mydata 目录中名称以字母 x 开头的所有 sav 文件。</p>
+
+  <p class="bullet">• 如果未指定文件名表达式，那么将假设为 *.sav。</p>
+
+  <p class="bullet">• 您必须选择此选项或者下面的<span class="screen">输入数据</span>选项，但不得同时选择这两个选项。</p>
+
+  <p><span class="runinhead">文件中指定的输入数据文件</span>。处理指定文件中列示的所有文件。SPSSINC SPLIT DATASET 命令能够以正确的格式生成文件。</p>
+
+  <p class="bullet">• 您必须选择此选项或者上面的<span class="screen">输入数据</span>选项，但不得同时选择这两个选项。</p>
+
+  <p><span class="runinhead">搜索表达式</span>。请输入一个将使用每个个案中的变量值求值为 true 或 false 的表达式。这相当于您在“数据”&gt;“选择个案”&gt;“如果”中输入的表达式。</p>
+
+  <p class="bullet">• 如果由于部分变量在所搜索的文件中不存在而无法对此表达式进行求值，那么将不会选中该个案。</p>
+
+  <p class="bullet">• 如果需要在表达式中包括字符串值，请使用单引号。（整个表达式将括在双引号内。）</p>
+
+  <p><span class="runinhead">要列示的变量</span>。请选择一个或多个要显示以便匹配个案的变量。</p>
+
+  <p><span class="runinhead">完成每个步骤后的数据文件处理</span>。选择<span class="screen">关闭</span>表示搜索每个数据集后将其关闭。</p>
+
+  <h2>其他功能部件</h2>运行命令<br>
+  SPSSINC PROCESS FILES /HELP。<br>
+  可以显示整个语法描述。此对话框实现了 SPSSINC PROCESS FILES
+部分功能。“实用程序”&gt;“处理数据文件”对话框支持此命令的常规功能。
+  <p>为了使用一个文件来指定应该处理的多个文件，请创建一个文件，并在其中的每一行指定一个名称（包括文件路径）。名称必须括在双引号 (") 内。该行中的所有后续内容都将被忽略。空行以及以 # 开头的行将被忽略。</p>
+
+  <h2>要求</h2>此命令需要 Python Programmability 插件。您可以在
+IBM SPSS Statistics CD 上找到 Python 插件，也可以从
+SPSS Developer Central (www.spss.com/devcentral) 下载此插件。<hr>
+
+  <p style="font-size:80%;">© Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>
