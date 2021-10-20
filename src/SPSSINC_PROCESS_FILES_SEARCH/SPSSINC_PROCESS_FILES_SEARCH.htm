@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content=
+  "text/html; charset=utf-8">
+
+  <title>Search the Cases in a Set of SPSS SAV Files</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>Search the Cases in a Set of SPSS SAV Files</h1>This
+  procedure provides a way to search through the cases in a
+  collection of similarly structured data files and display
+  information from those matching the search criteria. You specify
+  the files to search, the case selection criterion, and the
+  variables to display for the selected cases.
+
+  <p class="bullet">• If the current active file does not have a
+  dataset name, it will be closed when this procedure is run.</p>
+
+  <p><span class="runinhead">Input Data Files Specified by Wildcard
+  Expression.</span> Choose a directory to process and, optionally,
+  specify a file pattern. For example,<br>
+  c:\mydata\x*.sav<br>
+  would process all the sav files in directory c:\mydata whose
+  names start with the letter x.</p>
+
+  <p class="bullet">• If no file-name expression is given,*.sav is
+  assumed.</p>
+
+  <p class="bullet">• You must choose either this option or the
+  following <span class="screen">Input Data</span> option but not
+  both.</p>
+
+  <p><span class="runinhead">Input Data Files Specified in a
+  File.</span> Process all the files listed in the specified file.
+  The SPSSINC SPLIT DATASET command can produce a file in the
+  correct format.</p>
+
+  <p class="bullet">• You must choose either this option or the
+  preceding <span class="screen">Input Data</span> option but not
+  both.</p>
+
+  <p><span class="runinhead">Search Expression.</span> Enter an
+  expression that evalues to true or false using the values of
+  variables in each case. It is equivalent to an expression that
+  you would enter in Data&gt;Select Cases&gt;If.</p>
+
+  <p class="bullet">• If the expression cannot be evaluated because
+  some variables do not exist in the file being searched, the case
+  is not selected.</p>
+
+  <p class="bullet">• Use single quotes if you need to include a
+  string value in the expression or use two double quotes. (The
+  entire expression will be surrounded by double quotes.)</p>
+
+  <p><span class="runinhead">Variables to List.</span> Select one
+  or more variables to be displayed for matching cases.</p>
+
+  <p><span class="runinhead">Data File Processing after Each
+  Step.</span> Choose <span class="screen">Close</span> to close
+  each dataset after it is searched.</p>
+
+  <h2>Additional Features</h2>Run the command<br>
+  SPSSINC PROCESS FILES /HELP.<br>
+  to display the entire syntax description. This dialog implements
+  a subset of the features of SPSSINC PROCESS FILES. The
+  Utilities&gt;Process Data Files dialog supports the general
+  capabilities of this command.
+
+  <p>In order to use a file to specify the files that should be
+  processed, create a file with one name per line including the
+  path to the file. The name must be enclosed in double quotes (").
+  Anything following on the line is ignored. Blank lines and lines
+  starting with # are ignored.</p>
+
+  <h2>Requirements</h2>This command requires the Python
+  Programmability Plug-in, You can find the Python plug-in on the
+  IBM SPSS Statistics CD, or you can download it from SPSS
+  Developer Central (www.spss.com/devcentral).
+  <hr>
+
+  <p style="font-size:80%;">© Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

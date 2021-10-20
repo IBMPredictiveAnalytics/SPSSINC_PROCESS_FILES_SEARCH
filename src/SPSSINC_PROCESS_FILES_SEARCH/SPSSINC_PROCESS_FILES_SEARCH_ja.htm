@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content=
+
+"text/html; charset=utf-8">
+
+  <title>SPSS SAV ファイルのセット内のケースの検索</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>SPSS SAV ファイルのセット内のケースの検索</h1>このプロシージャは、類似した構造を持つデータ ファイルのコレクション内でケースを検索し、検索条件と一致するケースから情報を表示するための方法を提供します。検索するファイル、ケース選択基準、および選択されたケースで表示する変数を指定します。<p class="bullet">現在のアクティブ ファイルにデータセット名がない場合は、このプロシージャが実行されるとファイルが閉じられます。</p>
+
+  <p><span class="runinhead">ワイルドカード式によって指定された入力データ ファイル:</span> 処理するディレクトリを選択し、オプションとしてファイル パターンを指定します。たとえば、<br>
+  c:\mydata\x*.sav<br>
+このパターンは、ディレクトリ c:\mydata 内の sav ファイルのうち、名前の先頭の文字が x であるファイルをすべて処理します。</p>
+
+  <p class="bullet">ファイル名の式が指定されなかった場合は、*.sav が仮定されます。</p>
+
+  <p class="bullet">このオプションまたは下記の<span class="screen">「入力データ」</span>オプションのいずれかを選択する必要がありますが、両方は選択できません。</p>
+
+  <p><span class="runinhead">ファイル内で指定された入力データ ファイル:</span> 指定されたファイル内にリストされたすべてのファイルを処理します。SPSSINC SPLIT DATASET コマンドは、正しい形式のファイルを生成できます。</p>
+
+  <p class="bullet">このオプションまたは上記の<span class="screen">「入力データ」</span>オプションのいずれかを選択する必要がありますが、両方は選択できません。</p>
+
+  <p><span class="runinhead">検索式:</span> 各ケース内の変数の値を使用して true または false として評価される式を入力します。これは、「データ」&gt;「ケースの選択」&gt;「If」で入力する式と同等です。</p>
+
+  <p class="bullet">検索されているファイル内にいくつかの変数が存在しないために式を評価できない場合、ケースは選択されません。</p>
+
+  <p class="bullet">式に文字列値を含める必要がある場合は、単一引用符を使用するか、2 つの二重引用符を使用します。(式全体が二重引用符によって囲まれます。)</p>
+
+  <p><span class="runinhead">リストする変数:</span> 一致するケースのために表示する 1 つ以上の変数を選択します。</p>
+
+  <p><span class="runinhead">各ステップ後にデータ ファイルを処理:</span> 検索後に各データセットを閉じるには、<span class="screen">「閉じる」</span>を選択します。</p>
+
+  <h2>その他の機能</h2>次のコマンドを実行します。<br>
+  SPSSINC PROCESS FILES /HELP.<br>
+シンタックス全体の説明が表示されます。このダイアログは、SPSSINC PROCESS FILES の機能のサブセットを実装します。「ユーティリティー」&gt;「データ ファイルの処理」ダイアログは、このコマンドの一般的な機能をサポートします。
+
+  <p>ファイルを使用して処理対象のファイルを指定するには、新しいファイルを作成し、処理対象のファイルへのパスを含むファイル名を各行に 1 つずつ指定します。名前は、二重引用符 (") で囲む必要があります。各行でファイル名の後に指定された内容は無視されます。空白行および # で始まる行は無視されます。</p>
+
+  <h2>要件</h2>このコマンドには、Python Programmability プラグインが必要です。Python プラグインは、IBM SPSS Statistics CD 上にあります。または、SPSS Developer Central (www.spss.com/devcentral) からダウンロードできます。
+  <hr>
+
+  <p style="font-size:80%;">© Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

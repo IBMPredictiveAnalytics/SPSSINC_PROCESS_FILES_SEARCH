@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content=
+  "text/html; charset=utf-8">
+
+  <title>Recherche des observations dans un ensemble de fichiers SAV SPSS</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>Recherche des observations dans un ensemble de fichiers SAV SPSS</h1>Cette procédure permet de rechercher parmi les observations dans une collection de fichiers de
+données de structure identique et d'afficher les informations de ceux correspondant aux critères de
+recherche. Indiquez les fichiers à rechercher, les critères de sélection des observations et les
+variables à afficher pour les observations sélectionnées.
+
+  <p class="bullet">• Si le fichier actif n'a pas de nom de jeu de données, il sera fermé lorsque
+cette procédure est exécutée.</p>
+
+  <p><span class="runinhead">Fichiers de données d'entrée indiqués par une expression
+générique :</span> Choisissez un répertoire à traiter et, facultativement, indiquez un modèle de
+fichier. Par exemple,<br>
+  c:\mydata\x*.sav<br>
+  entraîne le traitement de tous les fichiers sav du répertoire c:\mydata dont les noms commencent
+par la lettre x.</p>
+
+  <p class="bullet">• Si aucune expression de nom de fichier n'est fournie, l'expression *.sav est
+prise en compte.</p>
+
+  <p class="bullet">• Vous devez choisir cette option ou l'option <span class="screen">Données
+d'entrée</span> suivante mais pas les deux.</p>
+
+  <p><span class="runinhead">Fichiers de données d'entrée indiqués dans un fichier :</span> Traite
+tous les fichiers répertoriés dans le fichier indiqué.
+  La commande SPSSINC SPLIT DATASET peut générer un fichier au format correct.</p>
+
+  <p class="bullet">• Vous devez choisir entre cette option et l'option
+<span class="screen">Données d'entrée</span> précédente.</p>
+
+  <p><span class="runinhead">Expression de recherche :</span> Entrez une expression évaluée sur true
+ou false à l'aide des valeurs de variable dans chaque observation. C'est une expression
+équivalente à celle qui serait entrée dans Données&gt;Sélectionner observations&gt;Si.</p>
+
+  <p class="bullet">• Si l'expression d'évaluation ne peut pas être évaluée car certaines variables
+n'existent pas dans le fichier sur lequel porte la recherche, l'observation n'est pas sélectionnée.</p>
+
+  <p class="bullet">• Utilisez des apostrophes si vous devez inclure une valeur de chaîne dans
+l'expression ou utilisez des guillemets. (L'intégralité de l'expression sera placée entre
+guillemets.)</p>
+
+  <p><span class="runinhead">Variables à répertorier :</span> Sélectionnez une ou plusieurs
+variables à afficher pour les observations correspondantes.</p>
+
+  <p><span class="runinhead">Traitement des fichiers de données après chaque étape :</span> Sélectionnez
+<span class="screen">Fermer</span> pour fermer chaque jeu de données une fois la recherche
+effectuée.</p>
+
+  <h2>Fonctions supplémentaires</h2>Exécutez la commande<br>
+  SPSSINC PROCESS FILES /HELP.<br>
+  pour afficher la description intégrale de la syntaxe. Cette boîte de dialogue met en oeuvre un
+sous-ensemble de fonctions de SPSSINC PROCESS FILES. La boîte de dialogue Utilitaires&gt;Traiter les fichiers de données prend en charge les fonctionnalités globales de
+cette commande.
+
+  <p>Pour utiliser un fichier en vue d'indiquer les fichiers à traiter, créez un fichier avec un
+nom par ligne et son chemin d'accès. Le nom doit être placé entre guillemets (").
+  Tout élément suivant sur la ligne est ignoré. Les lignes vides et celles commençant par # sont
+ignorées.</p>
+
+  <h2>Conditions requises</h2>Cette commande requiert le plug-in de programmabilité Python, fourni
+sur le CD-ROM IBM SPSS Statistics, ou téléchargeable à partir de SPSS Developer Central (www.spss.com/devcentral).
+  <hr>
+
+  <p style="font-size:80%;">© Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

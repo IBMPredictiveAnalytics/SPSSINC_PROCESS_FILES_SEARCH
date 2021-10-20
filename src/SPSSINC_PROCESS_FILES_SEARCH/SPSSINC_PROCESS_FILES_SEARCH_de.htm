@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content=
+  "text/html; charset=utf-8">
+
+  <title>Fälle in einem Set von SPSS-SAV-Dateien durchsuchen</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>Fälle in einem Set von SPSS-SAV-Dateien durchsuchen</h1>Diese Prozedur bietet eine Möglichkeit, die Fälle in einer Sammlung ähnlich strukturierter Datendateien zu durchsuchen und Informationen aus den Fällen anzuzeigen, die den Suchkriterien entsprechen. Sie geben die zu durchsuchenden Dateien, das Kriterium zu Fallauswahl und die für die ausgewählten Fälle anzuzeigenden Variablen an.
+
+  <p class="bullet">•&nbsp;Wenn die derzeit aktive Datei keinen Datasetnamen hat, wird sie beim Ausführen dieser Prozedur geschlossen.</p>
+
+  <p><span class="runinhead">Durch Platzhalterausdruck angegebene Datendateien.</span> Wählen Sie ein Verzeichnis für die Verarbeitung aus und geben Sie optional ein Dateimuster an. Beispiel:<br>
+  c:\mydata\x*.sav<br>
+  verarbeitet alle SAV-Dateien im Verzeichnis c:\mydata, deren Namen mit dem Buchstaben x beginnen.</p>
+
+  <p class="bullet">•&nbsp;Wird kein Ausdruck für einen Dateinamen angegeben, wird *.sav angenommen.</p>
+
+  <p class="bullet">•&nbsp;Sie müssen diese Option oder die folgende Eingabedatenoption auswählen.<span class="screen"></span> Die Optionen können jedoch nicht kombiniert werden.</p>
+
+  <p><span class="runinhead">In einer Datei angegebene Eingabedatendateien.</span> Alle in der angegebenen Datei aufgelisteten Dateien werden verarbeitet.
+  Der Befehl SPSSINC SPLIT DATASET kann eine Datei im korrekten Format erzeugen.</p>
+
+  <p class="bullet">•&nbsp;Sie müssen diese Option oder die vorhergehende Eingabedatenoption auswählen.<span class="screen"></span> Die Optionen können jedoch nicht kombiniert werden.</p>
+
+  <p><span class="runinhead">Suchausdruck.</span> Geben Sie einen Ausdruck ein, der unter Verwendung der Werte der Variablen in jedem Fall in 'true' oder 'false' ausgewertet wird. Er entspricht einem Ausdruck, den Sie in <b>Daten&gt;Fälle auswählen&gt;Falls</b> eingeben würden.</p>
+
+  <p class="bullet">•&nbsp;Wenn der Ausdruck nicht ausgewertet werden kann, da einige Variablen in der gesuchten Datei nicht vorhanden sind, wird der Fall nicht ausgewählt.</p>
+
+  <p class="bullet">•&nbsp;Verwenden Sie einfache Anführungszeichen, wenn Sie einen Zeichenfolgewert in den Ausdruck aufnehmen müssen, oder verwenden Sie zwei doppelte Anführungszeichen. (Der gesamte Ausdruck wird in doppelte Anführungszeichen eingeschlossen.)</p>
+
+  <p><span class="runinhead">Aufzulistende Variablen.</span> Wählen Sie mindestens eine Variable aus, die für übereinstimmende Fälle angezeigt werden woll.</p>
+
+  <p><span class="runinhead">Datendateiverarbeitung nach jedem Schritt.</span> Wählen Sie <span class="screen">Schließen</span> aus, um jedes Dataset zu schließen, nachdem es durchsucht wurde.</p>
+
+  <h2>Weitere Funktionen</h2>Führen Sie den folgenden Befehl aus:<br>
+  SPSSINC PROCESS FILES /HELP.<br>
+  Sie zeigen damit die vollständige Syntaxbeschreibung an. Dieser Dialog implementiert ein Subset der Funktionen von SPSSINC PROCESS FILES. Der Dialog <b>Extras&gt;Datendateien verarbeiten</b> unterstützt die allgemeine Funktionalität dieses Befehls.
+
+  <p>Wenn die zu verarbeitenden Dateien in einer Datei angegeben werden sollen, erstellen Sie eine Datei, die pro Zeile den Namen und den Pfad zu einer Datei enthält. Der Name muss in Anführungszeichen (") eingeschlossen sein.
+  Der darauf folgende Text in der Zeile wird ignoriert. Leere Zeilen und mit # beginnende Zeilen werden ignoriert.</p>
+
+  <h2>Anforderungen</h2>Dieser Befehl erfordert das Python-Programmierungs-Plug-in. Sie finden das Python-Plug-in auf der IBM SPSS Statistics-CD oder Sie können es über SPSS Developer Central (www.spss.com/devcentral) herunterladen.
+  <hr>
+
+  <p style="font-size:80%;">© Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

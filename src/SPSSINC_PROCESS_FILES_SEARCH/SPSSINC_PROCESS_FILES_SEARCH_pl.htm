@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content=
+  "text/html; charset=utf-8">
+
+  <title>Wyszukiwanie obserwacji w zbiorze plików SPSS SAV</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>Wyszukiwanie obserwacji w zbiorze plików SPSS SAV</h1>Ta procedura umożliwia wyszukiwanie obserwacji w kolekcji plików danych o podobnej strukturze i umożliwia wyświetlanie informacji z obserwacji zgodnych z kryteriami wyszukiwania. Należy określić pliki do wyszukiwania, kryterium wyboru obserwacji oraz zmienne do wyświetlenia dla wybranych obserwacji.
+
+  <p class="bullet">• Jeśli bieżący aktywny plik nie ma nazwy zbioru danych, wówczas zostanie on zamknięty po wykonaniu tej procedury.</p>
+
+  <p><span class="runinhead">Pliki danych wejściowych określane
+  przy użyciu wyrażenia z symbolami wieloznacznymi.</span> Wybierz
+  katalog do przetwarzania, a następnie opcjonalnie określ wzorzec
+  pliku. Na przykład,<br>
+  c:\mydata\x*.sav<br>
+  spowoduje przetwarzanie wszystkich plików sav w katalogu
+  c:\mydata, których nazwy zaczynają się od litery x.</p>
+
+  <p class="bullet">• Jeśli nie zostanie wprowadzone wyrażenie
+  nazwy pliku, wówczas zostanie przyjęte wyrażenie *.sav.</p>
+
+  <p class="bullet">• Należy wybrać tę opcję lub kolejną opcję
+  dotyczącą <span class="screen">danych wejściowych</span>, ale nie
+  obydwie.</p>
+
+  <p><span class="runinhead">Pliki danych wejściowych określone w
+  pliku.</span> Przetwarzane są wszystkie pliki określone w podanym
+  pliku.
+  Komenda SPSSINC SPLIT DATASET może wygenerować plik w
+  odpowiednim formacie.</p>
+
+  <p class="bullet">• Należy wybrać tę opcję lub poprzednią opcję
+  dotyczącą <span class="screen">danych wejściowych</span>, ale nie
+  obydwie.</p>
+
+  <p><span class="runinhead">Wyrażenie wyszukiwania.</span> Wprowadź wyrażenie, które zwróci wynik prawda lub fałsz, korzystając z wartości zmiennych dla każdej obserwacji. Jest to równoważnik wyrażenia, które można wprowadzić po wybraniu opcji Dane&gt;Wybierz obserwacje&gt;Jeśli.</p>
+
+  <p class="bullet">• Jeśli wyrażenia nie można ocenić, ponieważ pewne zmienne nie istnieją w pliku objętym wyszukiwaniem, wówczas obserwacja nie zostanie wybrana.</p>
+
+  <p class="bullet">• Użyj cudzysłowów pojedynczych, jeśli do wyrażenia wymagane jest dołączenie wartości łańcucha - w przeciwnym wypadku użyj podwójnych cudzysłowów. (Całe wyrażenie będzie ujęte w cudzysłowach podwójnych).</p>
+
+  <p><span class="runinhead">Zmienne do umieszczenia na liście.</span> Wybierz jedną lub większą liczbę zmiennych do wyświetlenia dla zgodnych obserwacji.</p>
+
+  <p><span class="runinhead">Przetwarzanie pliku danych po każdym
+  kroku.</span> Po wybraniu opcji <span class="screen">Zamknij</span> kolejne zbiory danych, których przeszukiwanie zostało zakończone, będą zamykane.</p>
+
+  <h2>Funkcje dodatkowe</h2>Uruchom komendę<br>
+  SPSSINC PROCESS FILES /HELP.<br>
+  w celu wyświetlenia opisu całej składni. To okno dialogowe implementuje podzbiór funkcji komendy SPSSINC PROCESS FILES. Okno dialogowe Narzędzia&gt;Przetwarzaj pliki danych obsługuje ogólne zdolności tej komendy.
+
+  <p>Aby użyć pliku w celu określenia plików, które powinny być
+  przetwarzane, utwórz plik zawierający jedną nazwę na wiersz (wraz
+  ze ścieżką do pliku). Nazwa musi być ujęta w cudzysłowach
+  podwójnych (").
+  Wszystkie kolejne znaki w tej linii będą
+  ignorowane. Ignorowane są linie puste oraz zaczynające się od
+  symbolu #.</p>
+
+  <h2>Wymagania</h2>Ta komenda wymaga wtyczki Python
+  Programmability, którą można znaleźć na dysku instalacyjnym IBM
+  SPSS Statistics lub pobrać z serwisu SPSS Community pod adresem www.ibm.com/developerworks/spssdevcentral/.
+  <hr>
+
+  <p style="font-size:80%;">© Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>

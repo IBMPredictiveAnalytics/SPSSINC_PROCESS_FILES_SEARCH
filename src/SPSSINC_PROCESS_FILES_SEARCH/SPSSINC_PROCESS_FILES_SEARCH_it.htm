@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content=
+  "text/html; charset=utf-8">
+
+  <title>Cerca i casi in un insieme di file SAV SPSS</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>Cerca i casi in un insieme di file SAV SPSS</h1>Questa
+procedura consente di cercare i casi in una raccolta di file
+di dati strutturati in maniera simile e di visualizzare le
+informazioni da quelle corrispondenti ai criteri di ricerca. È
+possibile specificare i file su cui eseguire la ricerca, il
+criterio di selezione dei casi e le variabili da visualizzare
+per i casi selezionati.
+
+  <p class="bullet">• Se il file attivo corrente non ha un nome di dataset,
+  verrà chiuso quando verrà eseguita questa procedura.</p>
+
+  <p><span class="runinhead">File di dati di input specificati dall'espressione jolly</span> Scegliere
+una cartella da elaborare e, facoltativamente, specificare un modello di file. Ad esempio,<br>
+  c:\mydata\x*.sav<br>
+  elabora tutti i file sav nella cartella c:\mydata i cui nomi iniziano con la lettera x.</p>
+
+  <p class="bullet">• Se non viene fornita alcuna espressione nome-file, si presume il valore *.sav.</p>
+
+  <p class="bullet">• È necessario scegliere questa opzione oppure la
+  seguente opzione <span class="screen">Dati di input</span>, ma non
+  entrambe.</p>
+
+  <p><span class="runinhead">File di dati di input specificati in un file.</span> Elaborare tutti i file elencati nel file specificato.
+  Il
+comando SPSSINC SPLIT DATASET può produrre un file nel formato corretto.</p>
+
+  <p class="bullet">• È necessario scegliere questa opzione oppure l'opzione precedente
+<span class="screen">Dati di input</span>, ma non
+  entrambe.</p>
+
+  <p><span class="runinhead">Espressione di ricerca.</span> Immettere
+  un'espressione che viene valutata come true o false utilizzando i
+  valori delle variabili in ciascun caso. È equivalente a un'espressione
+  immessa in Dati&gt;Seleziona casi&gt;Se.</p>
+
+  <p class="bullet">• Se l'espressione non può essere valutata perché alcune
+  variabili non esistono nel file oggetto della ricerca, il caso non
+  viene selezionato.</p>
+
+  <p class="bullet">• Utilizzare gli apici se occorre
+  includere un valore stringa nell'espressione oppure utilizzare
+  due virgolette. L'intera espressione sarà racchiusa tra virgolette.</p>
+
+  <p><span class="runinhead">Variabili da elencare.</span> Selezionare una o più variabili da visualizzare per i casi corrispondenti.</p>
+
+  <p><span class="runinhead">Elaborazione del file di dati dopo ogni fase.</span> Scegliere <span class="screen">Chiudi</span> per
+chiudere ogni dataset dopo che è stato sottoposto alla ricerca.</p>
+
+  <h2>Funzioni aggiuntive</h2>Eseguire il comando<br>
+  SPSSINC PROCESS FILES /HELP.<br>
+  per visualizzare la descrizione della sintassi completa. Questa finestra di dialogo implementa un sottoinsieme delle funzioni di
+SPSSINC PROCESS FILES. La finestra di dialogo Programmi di utilità&gt;Elabora file di dati supporta le capacità generali di questo
+comando.
+
+  <p>Per utilizzare un file per specificare i file che devono essere
+  elaborati, creare un file con un singolo nome per riga,
+  includendo il percorso del file. Il nome deve essere racchiuso tra virgolette (").
+  Quanto viene dopo sulla riga viene ignorato. Le righe vuote e le righe che iniziano con # vengono ignorate.</p>
+
+  <h2>Requisiti</h2>Questo comando richiede il plug-in Python Programmability.
+Il plug-in Python è disponibile sul CD di IBM SPSS Statistics CD oppure è possibile scaricarlo da
+SPSS Developer Central (www.spss.com/devcentral).
+  <hr>
+
+  <p style="font-size:80%;">© Copyright IBM Corp. 1989, 2013</p>
+</body>
+</html>
