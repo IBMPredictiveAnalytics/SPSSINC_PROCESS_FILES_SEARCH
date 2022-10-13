@@ -1,4 +1,5 @@
 Name: SPSSINC PROCESS FILES_SEARCH
+Display-Name: Search Cases in Files
 Dialog-Specs: SPSSINC_PROCESS_FILES_SEARCH.spd
 Misc-Files: extsyntax.css
 Summary: Search the cases in a set of SPSS SAV files
