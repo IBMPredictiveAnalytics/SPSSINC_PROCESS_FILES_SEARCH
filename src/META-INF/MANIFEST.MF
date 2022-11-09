@@ -10,10 +10,10 @@ Description: This procedure provides a way to search through the cases
  y for the selected cases. This bundle requires the SPSSINC PROCESS FI
  LES extension.
 Author: JKP IBM SPSS
-Version: 2.0.0
+Version: 2.0.1
 Product-Version: 24
 Date: 1/2/2014
 Plugins: Python
 Python-Version: 3
-Python-Modules: SPSSINC_PROCESS_FILES.py
+Extension-Bundles: SPSSINC PROCESS FILES
 Translation-Catalogues: lang
